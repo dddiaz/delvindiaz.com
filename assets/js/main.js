@@ -139,35 +139,54 @@
 
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
+				// $form.addEventListener('submit', function(event) {
 
-					event.stopPropagation();
-					event.preventDefault();
+				// 	event.stopPropagation();
+				// 	event.preventDefault();
 
-					// Hide message.
-						$message._hide();
+				// 	//process form
+				// 	var $formData = {
+			 //            //'name'              : $('input[name=name]').val(),
+			 //            //'email'             : $('input[name=email]').val()//,
+			 //            //'superheroAlias'    : $('input[name=superheroAlias]').val()
+			 //            'name'                : document.getElementById('name-to-submit').value,
+			 //            'email'               : document.getElementById('email-to-submit').value
+			 //        };
 
-					// Disable submit.
-						$submit.disabled = true;
+			 //        console.log($formData);
 
-					// Process form.
-					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-					// but there's enough here to piece together a working AJAX submission call that does.
-						window.setTimeout(function() {
+				// 	// Hide message.
+				// 		$message._hide();
 
-							// Reset form.
-								$form.reset();
+				// 	// Disable submit.
+				// 		$submit.disabled = true;
 
-							// Enable submit.
-								$submit.disabled = false;
+				// 	// Process form.
+				// 	// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
+				// 	// but there's enough here to piece together a working AJAX submission call that does.
+				// 		window.setTimeout(function() {
 
-							// Show message.
-								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+				// 	        // process the form
+				// 	        $.ajax({
+				// 	            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				// 	            url         : '//formspree.io/daniel.delvn.diaz@gmail.com', // the url where we want to POST
+				// 	            data        : formData, // our data object
+				// 	            dataType    : 'json' // what type of data do we expect back from the server
+				// 	        })
 
-						}, 750);
+				// 			// Reset form.
+				// 				$form.reset();
 
-				});
+				// 			// Enable submit.
+				// 				$submit.disabled = false;
+
+				// 			// Show message.
+				// 				$message._show('success', 'Thank you!');
+				// 				//$message._show('failure', 'Something went wrong. Please try again.');
+
+				// 		}, 750);
+
+				// });
 
 		})();
 
